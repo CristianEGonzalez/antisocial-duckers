@@ -1,0 +1,54 @@
+.carousel-container{
+  height: calc(100vh - 300px);
+}
+
+.carousel-item.active,
+.carousel-item.carousel-item-start,
+.carousel-item.carousel-item-end {
+  height: 100%;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.carousel-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Altura de scroll de la columna de la derecha */
+.scroll-columna-derecha {
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.scroll-columna-derecha-sin-imagenes h2.h4 {
+    font-size: 1.8rem;
+}
+
+.scroll-columna-derecha-sin-imagenes p.text-muted {
+    font-size: 1.2rem;
+}
+
+
+/* Scroll vertical solo en desktop */
+@media (min-width: 768px) {
+    .carousel-container{
+      height: calc(100vh - 100px);
+    }
+
+  .scroll-columna-derecha {
+      height: calc(100vh - 100px);
+      overflow-y: auto;
+    }
+
+  .scroll-columna-derecha-sin-imagenes {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100vh - 100px);
+  }
+}
